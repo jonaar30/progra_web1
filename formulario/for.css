@@ -9,7 +9,7 @@ body {
 .form-container {
     max-width: 600px;
     margin: 50px auto;
-    background-color: #333;
+    background-color: #373535;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
@@ -21,8 +21,8 @@ form {
 }
 
 h2 {
-    color: #8aff80;
-    border-bottom: 2px solid #8aff80;
+    color: #2e8826;
+    border-bottom: 2px solid #2e8826;
     padding-bottom: 5px;
     margin-bottom: 10px;
 }
@@ -33,7 +33,7 @@ h2 {
 }
 
 label {
-    color: #8aff80;
+    color: #2e8826;
 }
 
 input,
@@ -47,7 +47,7 @@ select {
 
 button {
     padding: 10px;
-    background-color: #8aff80;
+    background-color: #2e8826;
     color: #333;
     border: none;
     border-radius: 5px;
@@ -57,33 +57,3 @@ button {
 button:hover {
     background-color: #5e995e;
 }
-
-input,
-select {
-    width: 100%;
-    padding: 12px;
-    box-sizing: border-box;
-    border: 1px solid #ccc; 
-    border-radius: 6px;
-    font-size: 16px;
-    margin-bottom: 15px;
-    background-color: #ecf0f5; 
-}
-
-select {
-    cursor: pointer;
-}
-
-button {
-    background-color: #85a1bf; 
-    color: #fff;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s;
-}
-
-button:hover {
-    background-color: #657b98; 
