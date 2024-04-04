@@ -1,0 +1,32 @@
+body {
+    font-family: 'Arial', sans-serif; /* Familia de fuentes externa */
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.link {
+    text-decoration: none;
+    color: #333;
+    padding: 20px 40px;
+    background-color: #99c086;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+
+.link:hover {
+    background-color: #ff0000; /* Cambio de color al pasar el mouse */
+    transform: rotate(-5deg); /* Inclinación */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra de la caja */
+}
+
+.link:active {
+    background-color: #0000ff; /* Cambio de color al hacer clic */
+}
