@@ -1,0 +1,23 @@
+body {
+    background-image: url("https://th.bing.com/th/id/R.d3fd1dfaa85e0591b66eb2e62faaf97f?rik=c1sBMVcEsaSYEQ&pid=ImgRaw&r=0");
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #fff;
+}
+
+div {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    font-size: 18px;
+    color: #333;
+    margin: 50px auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
