@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Obtener totales del formulario</title>
+    <link rel="stylesheet" type="text/css" href="evaluarC.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <!-- siempre para convertir a pdf copiar todos-->
+    <script type="text/javascript" src="js/jquery/jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery/jquery-ui-1.8.17.custom.min.js"></script>
+    <script type="text/javascript" src="jspdf.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.addimage.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.standard_fonts_metrics.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.split_text_to_size.js"></script>
+    <script type="text/javascript" src="jspdf.plugin.from_html.js"></script>
+</head>
+<script>
+    var total;
+
+    function califica() {
+        var total = 0;
+        //Evalua cada pregunta
+        for (var x = 1; x <= 10; x++) {
+            var res = 0;
+            var nom = "r" + x;
+            var resul = document.getElementsByName(nom);
+            for (var i = 0; i < resul.length; i++) {
+                if (resul[i].checked == true)
+                    res = parseInt(resul[i].value);
+            }
+            total = total + res;
+            document.getElementById("total").innerHTML = "Puntos obtenidos: " + total + " Puntos";
+        }
+        if (total == 20)
+            document.getElementById("comentario").innerHTML = "EXCELENTE!!!";
+        else
+        if (total == 15)
+            document.getElementById("comentario").innerHTML = "Regular!!";
+        else
+        if (total <= 15)
+            document.getElementById("comentario").innerHTML = "Estudia un poco más";
+    }
+
+
+    function generar() {
+
+        //Crear un objeto o instancia jsPDF
+        var doc = new jsPDF();
+
+        //Definir el tamaño de la letra
+        doc.setFontSize(40);
+        //Color del texto
+        doc.setTextColor(9, 7, 121);
+        doc.text(40, 20, "Conceptos basicos");
+        doc.setTextColor(17, 122, 209); //Color en formato RGB
+        doc.setFontSize(30);
+        doc.text(50, 35, "Resultados del test"); //Ubicación, Texto
+        doc.setTextColor(0, 0, 0);
+        doc.setFontSize(10);
+        doc.text(20, 50, "20 puntos. Muy bien. \r Todas tus respuestas son correctas");
+        doc.text(20, 70, "15 puntos. Regular. \r Obtuviste 3 preguntas correctas");
+        doc.text(20, 90, "0 puntos. \r Todas tus respuestas son incorrectas");
+
+        //doc.addImage(imgData, 'JPEG', 10, 40, 180, 180);
+
+        var string = doc.output('datauristring');
+
+        $('iframe').attr('src', string);
+
+    }
+</script>
+
+<body>
+    <div id="contiene">
+        <h1>Responde el cuestionario sobre BIG DATA Y ANALISIS DE DATOS</h1>
+        <div>
+            <form>
+                <ul>
+                    <li>¿Qué es Big Data?</li>
+                    <input type="radio" name="r1" id="r1" value="5" />Un término para describir grandes conjuntos de datos<br/>
+                    <input type="radio" name="r1" id="r1" value="0" />Un superhéroe en el Universo Marvel<br/>
+                    <input type="radio" name="r1" id="r1" value="0" />Una técnica de manipulación genética<br/>
+                    <input type="radio" name="r1" id="r1" value="0" />Una ciudad ficticia en una película de ciencia ficción<br/>
+                    <br/>
+                    <li>¿Cuál de las siguientes tecnologías se utiliza comúnmente para procesar grandes volúmenes de datos en tiempo real?</li>
+                    <input type="radio" name="r2" id="r2" value="0" />Blockchain<br/>
+                    <input type="radio" name="r2" id="r2" value="0" />Python<br/>
+                    <input type="radio" name="r2" id="r2" value="5" />Apache Kafka<br/>
+                    <input type="radio" name="r2" id="r2" value="0" />Photoshop<br/>
+                    <br/>
+                    <li>¿Qué término se utiliza para describir el proceso de extracción de conocimiento útil a partir de grandes conjuntos de datos?</li>
+                    <input type="radio" name="r3" id="r3" value="0" />Big Code<br/>
+                    <input type="radio" name="r3" id="r3" value="5" />Data Mining<br/>
+                    <input type="radio" name="r3" id="r3" value="0" />Web Scraping<br/>
+                    <input type="radio" name="r3" id="r3" value="0" />Crypto Trading<br/>
+                    <br/>
+                    <li>¿Cuál de las siguientes opciones NO es un tipo de análisis de datos?</li>
+                    <input type="radio" name="r4" id="r4" value="0" />Análisis predictivo<br/>
+                    <input type="radio" name="r4" id="r4" value="0" />Análisis descriptivo<br/>
+                    <input type="radio" name="r4" id="r4" value="5" />Análisis agresivo<br/>
+                    <input type="radio" name="r4" id="r4" value="0" />Análisis prescriptivo<br/>
+                    <br/>
+                    <li>¿Qué es Hadoop en el contexto de Big Data?</li>
+                    <input type="radio" name="r5" id="r5" value="0" />Un sistema de bases de datos SQL<br/>
+                    <input type="radio" name="r5" id="r5" value="0" />Un lenguaje de programación<br/>
+                    <input type="radio" name="r5" id="r5" value="5" />Un framework para el procesamiento distribuido de datos<br/>
+                    <input type="radio" name="r5" id="r5" value="0" />Una técnica de minería de datos<br/>
+                    <br/>
+                    <li>¿Qué significa el término "Machine Learning" en el ámbito del análisis de datos?</li>
+                    <input type="radio" name="r6" id="r6" value="0" />Un método para enseñar a las máquinas a escribir código<br/>
+                    <input type="radio" name="r6" id="r6" value="5" />Un enfoque para que las máquinas aprendan patrones a partir de datos<br/>
+                    <input type="radio" name="r6" id="r6" value="0" />Una técnica para comprimir grandes volúmenes de datos<br/>
+                    <input type="radio" name="r6" id="r6" value="0" />Un protocolo de comunicación entre dispositivos IoT<br/>
+                    <br/>
+                    <li>¿Qué es un algoritmo de clustering en el análisis de datos?</li>
+                    <input type="radio" name="r7" id="r7" value="0" />Un método para encriptar datos<br/>
+                    <input type="radio" name="r7" id="r7" value="5" />Una técnica para dividir conjuntos de datos en grupos significativos<br/>
+                    <input type="radio" name="r7" id="r7" value="0" />Un procedimiento para recolectar datos de sensores<br/>
+                    <input type="radio" name="r7" id="r7" value="0" />Una forma de realizar auditorías de datos<br/>
+                    <br/>
+                    <li>¿Cuál de las siguientes herramientas se utiliza para analizar y visualizar datos de forma interactiva?</li>
+                    <input type="radio" name="r8" id="r8" value="0" />Excel<br/>
+                    <input type="radio" name="r8" id="r8" value="5" />Tableau<br/>
+                    <input type="radio" name="r8" id="r8" value="0" />Notepad<br/>
+                    <input type="radio" name="r8" id="r8" value="0" />Photoshop<br/>
+                    <br/>
+                    <li>¿Cuál de los siguientes conceptos se refiere a la práctica de analizar grandes conjuntos de datos para descubrir patrones y tendencias ocultas?</li>
+                    <input type="radio" name="r9" id="r9" value="5" />Análisis de datos exploratorio<br/>
+                    <input type="radio" name="r9" id="r9" value="0" />Análisis de datos predictivo<br/>
+                    <input type="radio" name="r9" id="r9" value="0" />Análisis de datos descriptivo<br/>
+                    <input type="radio" name="r9" id="r9" value="0" />Análisis de datos estructurados<br/>
+                    <br/>
+                    <li>¿Cuál de las siguientes técnicas se utiliza para proteger la privacidad de los datos durante el análisis?</li>
+                    <input type="radio" name="r10" id="r10" value="0" />Data Wrangling<br/>
+                    <input type="radio" name="r10" id="r10" value="0" />Data Blending<br/>
+                    <input type="radio" name="r10" id="r10" value="5" />Anonimización de datos<br/>
+                    <input type="radio" name="r10" id="r10" value="0" />Data Stewardship<br/>
+                </ul>
+
+            </form>
+        </div>
+        <input type="button" value="Calificar" onclick="califica()">
+        <p></p>
+        <p id="total"> </p>
+        <p id="comentario"> </p>
+        <input type="button" onclick="generar()" value="Ver resultados" /> <br/>
+        <iframe frameborder="0" width="600" height="500"></iframe>
+    </div>
+</body>
+
+</html>
