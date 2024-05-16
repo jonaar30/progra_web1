@@ -1,0 +1,177 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>VISIÓN A FUTURO</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {
+            'packages': ['corechart']
+        });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+            var data = google.visualization.arrayToDataTable([
+                ['Aplicación', 'Porcentaje', {
+                    role: 'style'
+                }],
+                ['Estimación de riesgo', 36, 'color: #003f5c'],
+                ['Prevención de fraude', 28, 'color: #2f4b7c'],
+                ['Análisis de influencers', 26, 'color: #665191'],
+                ['Perfilado del cliente', 26, 'color: #a05195'],
+                ['Predicción de daños', 25, 'color: #d45087'],
+                ['Eficiencia del centro de llamadas', 24, 'color: #f95d6a'],
+                ['Trading algorítmico', 20, 'color: #ff7c43'],
+                ['Análisis de redes sociales para la inversión en bolsa', 17, 'color: #ffa600'],
+                ['Análisis de sentimiento y reputación de marca', 17, 'color: #ffa600']
+            ]);
+
+            var options = {
+                title: 'Uso del Big Data en el Sector Financiero',
+                chartArea: {
+                    width: '70%'
+                },
+                hAxis: {
+                    title: 'Porcentaje',
+                    minValue: 0,
+                    textStyle: {
+                        color: '#333'
+                    }
+                },
+                vAxis: {
+                    title: 'Aplicación',
+                    textStyle: {
+                        color: '#333'
+                    }
+                },
+                backgroundColor: '#f4f4f4'
+            };
+
+            var chart = new google.visualization.BarChart(document.getElementById('bar_chart'));
+            chart.draw(data, options);
+        }
+    </script>
+</head>
+
+<body class="is-preload">
+    <div id="page-wrapper">
+
+        <!-- Header -->
+        <header id="header">
+            <h1 id="logo"><a href="index.html">DATAVORTEX</a></h1>
+            <nav id="nav">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li><a href="impacto.html">IMPACTO</a></li>
+                    <li><a href="sit_actual.html">SITUACIÓN ACTUAL</a></li>
+                    <li><a href="vis_fut.html">VISIÓN A FUTURO</a></li>
+                    <li><a href="videos.html">VIDEOS</a></li>
+                    <li>
+                        <a href="#">INTERACCIÓN</a>
+                        <ul>
+                            <li><a href="blog.html">BLOG</a></li>
+                            <li><a href="contacto.html">CONTACTO</a></li>
+                            <li><a href="cuestionario.html">CUESTIONARIO</a></li>
+                            <li><a href="contacto.html">CHAT</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="galeria.html">GALERÍA</a></li>
+                    <li><a href="ayuda.html">AYUDA</a>
+                        <ul>
+                            <li><a href="pr_frecuentes.html">PREGUNTAS FRECUENTES</a></li>
+                            <li><a href="ayuda.html">GRUPOS DE AYUDA</a></li>
+                            <li><a href="redes_sociales.html">REDES SOCIALES</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <!-- Main -->
+        <div id="main" class="wrapper style1">
+            <div class="container">
+                <header class="major">
+                    <h2>VISIÓN A FUTURO</h2>
+                    <p>BIG DATA Y ANALISIS DE DATOS</p>
+                </header>
+                <div class="row gtr-150">
+                    <div class="col-4 col-12-medium">
+
+                        <!-- Sidebar -->
+                        <section id="sidebar">
+                            <section>
+                                <p>En el horizonte del progreso tecnológico, el big data y el análisis de datos emergen como los cimientos de una nueva era de innovación y comprensión. En este futuro próximo, visualizamos un mundo donde cada dato recopilado
+                                    es una oportunidad para desentrañar nuevos conocimientos y potenciar la toma de decisiones. Desde la personalización de servicios hasta la optimización de procesos, estas tecnologías prometen transformar fundamentalmente
+                                    la forma en que interactuamos con nuestro entorno. Sin embargo, con este potencial ilimitado también vienen desafíos éticos y de privacidad que requieren una atención cuidadosa. En este viaje hacia adelante, es esencial
+                                    mantener un equilibrio entre la innovación y la responsabilidad, asegurando que el futuro del big data y el análisis de datos sea tanto prometedor como ético.
+                                </p>
+                                <footer>
+                                    <ul class="actions">
+                                    </ul>
+                                </footer>
+                            </section>
+                            <hr />
+                        </section>
+
+                    </div>
+                    <div class="col-8 col-12-medium imp-medium">
+
+                        <!-- Content -->
+                        <section id="content">
+                            <img src="https://www.unisabana.edu.co/fileadmin/_processed_/b/f/csm_big_data_unisabana_8c24b8011e.jpg" alt="Big Data UNISABANA" style="max-width: 100%; height: auto;">
+                            <h3>FUTUROS AVANCES</h3>
+                            <p> Inteligencia Artificial Explicativa: A medida que la inteligencia artificial se vuelva más omnipresente, surgirá la necesidad de comprender y explicar los resultados de los modelos de aprendizaje automático de manera más transparente.
+                                Se espera que avances en este campo permitan explicar cómo y por qué se toman ciertas decisiones, lo que mejorará la confianza en los sistemas de IA. </p>
+                            <p> Analítica de Grafos Avanzada: La analítica de grafos, que analiza las relaciones entre entidades en un conjunto de datos, se volverá más sofisticada. Esto permitirá a las organizaciones detectar patrones y conexiones complejas
+                                en datos interconectados, como redes sociales, sistemas de transporte y redes financieras. </p>
+                            <p>Computación Cuántica para Análisis de Datos: A medida que la computación cuántica se vuelva más accesible, se espera que tenga un impacto significativo en el análisis de datos. Los algoritmos cuánticos podrían resolver problemas
+                                complejos de análisis de datos mucho más rápido que los sistemas clásicos, abriendo nuevas posibilidades en áreas como la optimización combinatoria y el aprendizaje automático. </p>
+                            <p>Analítica de Datos Biométricos y de Salud: Con el avance de la tecnología wearable y los dispositivos de salud conectados, se espera una explosión de datos biométricos. Esto permitirá un análisis más detallado de la salud y
+                                el bienestar individual, así como la identificación de patrones de enfermedades y la personalización de tratamientos médicos. </p>
+                            <p>Analítica de Datos Espaciales y Geoespaciales: Con el crecimiento de la Internet de las cosas (IoT) y la disponibilidad de datos de ubicación en tiempo real, se espera un mayor interés en la analítica de datos espaciales y
+                                geoespaciales. Esto permitirá a las organizaciones comprender mejor los patrones de movimiento, la distribución geográfica de clientes y la optimización de rutas de entrega, entre otros usos. </p>
+                            <p>Analítica de Datos Éticos y Responsables: A medida que el uso de datos se vuelva más ubicuo, surgirá la necesidad de un enfoque ético y responsible hacia la analítica de datos. Se espera que surjan estándares y prácticas para
+                                garantizar la privacidad, la equidad y la transparencia en el uso de datos, protegiendo los derechos individuales mientras se aprovechan los beneficios de la analítica de datos. </p>
+
+                            <div id="bar_chart" style="width: 100%; height: 500px;"></div>
+                        </section>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer id="footer">
+            <ul class="icons">
+                <li><a href="https://x.com/Jona_argueta584?t=rbInqt2d2dReXJWBqpAaAA&s=09" class="icon brands alt fa-twitter"><span class="label">Twitter</span></a></li>
+                <li><a href="https://www.facebook.com/jonathanyair.arguetarojas?mibextid=ZbWKwL" class="icon brands alt fa-facebook-f"><span class="label">Facebook</span></a></li>
+                <li><a href="https://www.instagram.com/jona__argueta?igsh=MWF1ZnF6NXBqeDU0dQ==" class="icon brands alt fa-instagram"><span class="label">Instagram</span></a></li>
+                <li><a href="https://github.com/jonaar30/progra_web1" class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+                <li><a href="malito: jonaarguetarojas@gmail.com" class="icon solid alt fa-envelope"><span class="label">Email</span></a></li>
+            </ul>
+            <ul class="copyright">
+                <li>&copy; Untitled. All rights reserved.</li>
+                <li>Design: <a href="#">JONATHAN YAIR ARGUETA ROJAS</a></li>
+            </ul>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/browser.min.js"></script>
+    <script src="assets/js/breakpoints.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
